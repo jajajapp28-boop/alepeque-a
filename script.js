@@ -145,25 +145,6 @@ function crearCorazon(){
 setInterval(crearCorazon,900);
 
 
-
-/******************
-EFECTO CARTA
-******************/
-
-envelope.addEventListener("mouseenter",()=>{
-
-    envelope.style.transform="translateY(-8px) scale(1.05)";
-
-});
-
-envelope.addEventListener("mouseleave",()=>{
-
-    envelope.style.transform="translateY(0px) scale(1)";
-
-});
-
-
-
 /******************
 MÚSICA
 ******************/
