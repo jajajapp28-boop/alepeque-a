@@ -68,12 +68,6 @@ body{
 .flowers{
     position:absolute;
     inset:0;
-    animation:sway 4.5s ease-in-out infinite;
-}
-
-.flowers{
-    position:absolute;
-    inset:0;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -81,39 +75,18 @@ body{
 
 .ramo-real{
     width:390px;
-    max-width:none;
+    height:auto;
     transform-origin:center bottom;
     animation:ramoAire 7s ease-in-out infinite;
-    user-select:none;
     pointer-events:none;
-}
-@keyframes ramoAire{
-
-    0%{
-        transform:rotate(-1deg) translateY(0px);
-    }
-
-    25%{
-        transform:rotate(.6deg) translateY(-3px);
-    }
-
-    50%{
-        transform:rotate(1.2deg) translateY(-5px);
-    }
-
-    75%{
-        transform:rotate(-.5deg) translateY(-2px);
-    }
-
-    100%{
-        transform:rotate(-1deg) translateY(0px);
-    }
-
+    user-select:none;
 }
 
 #envelope{
     position:absolute;
-    top:194px;
+    top:145px;
+    left:50%;
+    transform:translateX(-50%);
     width:112px;
     height:80px;
     background:linear-gradient(145deg,#fff5f8,#ffdbe7);
@@ -122,14 +95,14 @@ body{
     align-items:center;
     justify-content:center;
     cursor:pointer;
-    z-index:5;
-    transition:transform .35s ease, box-shadow .35s ease;
+    z-index:20;
     box-shadow:0 12px 22px rgba(0,0,0,.22);
+    animation:latido 2.8s ease-in-out infinite;
 }
 
 #envelope:hover{
-    transform:translateY(-6px) scale(1.04);
-    box-shadow:0 18px 28px rgba(0,0,0,.28);
+    animation-play-state:paused;
+    transform:translateX(-50%) translateY(-6px) scale(1.08);
 }
 
 #envelope::before{
@@ -216,9 +189,50 @@ body{
     from{transform:scale(.92) translateY(12px);opacity:0;}
     to{transform:scale(1) translateY(0);opacity:1;}
 }
+@keyframes ramoAire{
 
+    0%{
+        transform:rotate(-1deg) translateY(0px);
+    }
+
+    25%{
+        transform:rotate(.6deg) translateY(-3px);
+    }
+
+    50%{
+        transform:rotate(1deg) translateY(-5px);
+    }
+
+    75%{
+        transform:rotate(-.5deg) translateY(-2px);
+    }
+
+    100%{
+        transform:rotate(-1deg) translateY(0px);
+    }
+
+}
+
+@keyframes latido{
+
+    0%,100%{
+        transform:translateX(-50%) scale(1);
+    }
+
+    25%{
+        transform:translateX(-50%) scale(1.04);
+    }
+
+    50%{
+        transform:translateX(-50%) scale(1);
+    }
+
+    75%{
+        transform:translateX(-50%) scale(1.03);
+    }
+
+}
 @media (max-width:420px){
     .titulo{font-size:2.4rem;}
     .bouquet{transform:scale(.92);}
-    }
-      
+        }
