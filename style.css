@@ -90,7 +90,7 @@ body{
     position:absolute;
     top:95px;              /* Cambia este valor para subir o bajar */
     left:75%;
-    transform:translateX(-50%) rotate(-15deg);
+    transform:translateX(-50%) rotate(-17deg);
     width:95px;
     cursor:pointer;
     z-index:20;
