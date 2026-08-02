@@ -99,8 +99,11 @@ body{
 }
 
 #envelope:hover{
-    animation-play-state:paused;
-    transform:translateX(-50%) translateY(-6px) scale(1.08);
+
+    transform:
+        rotate(-8deg)
+        scale(1.05);
+
 }
 #envelope{
     position:absolute;
