@@ -1,355 +1,98 @@
 <!DOCTYPE html>
-<html lang="es">  
-<head>  
-<meta charset="UTF-8">  
-<title>Para ti 💙</title>  
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti 🌷</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">
 
-<style>  
-*{box-sizing:border-box;margin:0;padding:0}  
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
 
-body{  
-  height:100vh;  
-  overflow:hidden;  
-  font-family:'Segoe UI',sans-serif;  
-  background:linear-gradient(180deg,#6ec6ff,#2193b0);  
-  color:white;  
-  display:flex;  
-  align-items:center;  
-  justify-content:center;  
-  transition:background 1.5s ease;  
-}  
+<body>
 
-canvas{position:fixed;top:0;left:0;z-index:0;}  
+    <!-- Fondo -->
+    <div class="background"></div>
 
-.moon{  
-  position:absolute;  
-  top:15%;  
-  right:10%;  
-  width:140px;  
-  height:140px;  
-  border-radius:50%;  
-  background:  
-    radial-gradient(circle at 30% 30%, #fff 35%, #ddd 60%, #bbb),  
-    radial-gradient(circle at 60% 60%, rgba(0,0,0,0.1) 8%, transparent 10%),  
-    radial-gradient(circle at 40% 70%, rgba(0,0,0,0.15) 6%, transparent 8%),  
-    radial-gradient(circle at 70% 40%, rgba(0,0,0,0.12) 5%, transparent 7%);  
-  box-shadow:0 0 80px white, 0 0 150px rgba(255,255,255,0.4);  
-  opacity:0;  
-  transition:opacity 2s;  
-}  
+    <!-- Partículas -->
+    <div id="particles"></div>
 
-body::after{  
-  content:"";  
-  position:fixed;  
-  inset:0;  
-  pointer-events:none;  
-  background:radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08), transparent 60%);  
-  opacity:0;  
-  transition:1s;  
-}  
-body.night::after{opacity:1;}  
+    <!-- Contenedor principal -->
+    <main class="container">
 
-.card{  
-  position:relative;  
-  z-index:2;  
-  backdrop-filter:blur(25px);  
-  background:rgba(255,255,255,0.08);  
-  border-radius:25px;  
-  padding:28px;  
-  width:90%;  
-  max-width:400px;  
-  text-align:center;  
-  box-shadow:0 20px 60px rgba(0,0,0,0.6);  
-  border:1px solid rgba(255,255,255,0.2);  
-  animation:latido 3s infinite; /* 👈 SOLO ESTO CAMBIÓ */
-}  
+        <h1 class="titulo">
+            Un pequeño detalle para ti 💗
+        </h1>
 
-.card::before{  
-  content:"";  
-  position:absolute;  
-  inset:0;  
-  border-radius:25px;  
-  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);  
-  opacity:0;  
-  transition:0.6s;  
-}  
-.card:hover::before{opacity:1;}  
+        <p class="subtitulo">
+            Toca la carta que está dentro del ramo.
+        </p>
 
-@keyframes latido{  
-  0%{transform:scale(1)}  
-  30%{transform:scale(1.02)}  
-  50%{transform:scale(1)}  
-  70%{transform:scale(1.02)}  
-  100%{transform:scale(1)}  
-}  
+        <!-- Ramo -->
+        <section class="bouquet">
 
-.envelope{  
-  margin-top:15px;  
-  position:relative;  
-  height:150px;  
-  background:linear-gradient(135deg,#e3f2fd,#bbdefb);  
-  border-radius:12px;  
-  overflow:hidden;  
-  cursor:pointer;  
-  box-shadow:0 10px 25px rgba(0,0,0,0.3);  
-  transition:transform 0.3s;  
-}  
-.envelope:hover{transform:scale(1.03);}  
+            <!-- Flores -->
+            <div class="flowers">
 
-.flap{  
-  position:absolute;  
-  width:100%;  
-  height:100%;  
-  background:linear-gradient(135deg,#90caf9,#42a5f5);  
-  clip-path:polygon(0 0,100% 0,50% 60%);  
-  transform-origin:top;  
-  transition:0.8s cubic-bezier(.4,2,.6,1);  
-  z-index:2;  
-}  
-.envelope.open .flap{transform:rotateX(120deg);}  
+                <div class="tulip t1"></div>
+                <div class="tulip t2"></div>
+                <div class="tulip t3"></div>
+                <div class="tulip t4"></div>
+                <div class="tulip t5"></div>
+                <div class="tulip t6"></div>
 
-.letter{  
-  position:absolute;  
-  bottom:0;  
-  width:100%;  
-  height:100%;  
-  background:white;  
-  color:#333;  
-  display:flex;  
-  align-items:center;  
-  justify-content:center;  
-  padding:15px;  
-  transform:translateY(100%);  
-  transition:0.6s;  
-}  
-.envelope.open .letter{transform:translateY(-10px);}  
+                <div class="baby b1"></div>
+                <div class="baby b2"></div>
+                <div class="baby b3"></div>
+                <div class="baby b4"></div>
+                <div class="baby b5"></div>
 
-#mensaje{  
-  font-family:'Caveat',cursive;  
-  font-size:1.7em;  
-  line-height:1.5;  
-  opacity:0;  
-  transition:0.5s;  
-  text-shadow:0 2px 10px rgba(0,0,0,0.3);  
-}  
+            </div>
 
-.btn{  
-  margin-top:15px;  
-  padding:10px 15px;  
-  border:none;  
-  border-radius:20px;  
-  background:rgba(255,255,255,0.2);  
-  color:white;  
-  backdrop-filter:blur(10px);  
-  transition:0.3s;  
-}  
-.btn:hover{background:rgba(255,255,255,0.4);transform:scale(1.05);}  
+            <!-- Carta -->
+            <div id="envelope">
 
-.peluche{position:absolute;animation:float linear infinite;}  
-@keyframes float{  
-  0%{transform:translateY(100vh);opacity:0}  
-  10%{opacity:1}  
-  100%{transform:translateY(-10vh);opacity:0}  
-}  
+                <div class="letter-front">
+                    💌
+                </div>
 
-.shooting-star{  
-  position:absolute;  
-  width:3px;  
-  height:3px;  
-  background:white;  
-  border-radius:50%;  
-  box-shadow:0 0 20px white, 0 0 40px white;  
-}  
-.shooting-star::after{  
-  content:'';  
-  position:absolute;  
-  width:120px;  
-  height:2px;  
-  background:linear-gradient(to right, white, transparent);  
-  transform:rotate(45deg);  
-}  
+            </div>
 
-</style>  
-</head>  
+        </section>
 
-<body>  
+    </main>
 
-<canvas id="space"></canvas>
-<div class="moon" id="moon"></div>  
+    <!-- Carta completa -->
+    <section id="letterModal">
 
-<div class="card">  
-  <h2>Hola Aslhisiita :)</h2>  
+        <div class="paper">
 
-  <div class="envelope" id="envelope">  
-    <div class="flap"></div>  
-    <div class="letter">  
-      <p id="mensaje"></p>  
-    </div>  
-  </div>  
+            <button id="close">
+                ✕
+            </button>
 
-  <button class="btn" onclick="toggleMusic()">🎵 Música</button>
+            <h2>
+                Para Ti 🌷
+            </h2>
 
-  <!-- 👇 SOLO ESTO SE AGREGÓ -->
-  <p style="margin-top:10px;font-size:0.9em;opacity:0.8;">
-    Toca el sobre para ver el mensaje ✉️
-  </p>
+            <div id="typing">
 
-</div>  
+            </div>
 
-<audio id="music" src="all-i-want.mp3"></audio>
+        </div>
 
-<script>
+    </section>
 
-/* TODO TU JS ORIGINAL SIN CAMBIOS */
+    <!-- Música -->
+    <audio id="music" loop>
 
-const canvas = document.getElementById("space");  
-const ctx = canvas.getContext("2d");  
+        <source src="music.mp3" type="audio/mpeg">
 
-canvas.width = innerWidth;  
-canvas.height = innerHeight;  
+    </audio>
 
-let stars = [];  
+    <script src="script.js"></script>
 
-for(let i=0;i<180;i++){  
-  stars.push({  
-    x:Math.random()*canvas.width,  
-    y:Math.random()*canvas.height,  
-    r:Math.random()*2,  
-    speed:Math.random()*0.3,  
-    alpha:Math.random()  
-  });  
-}  
-
-function draw(){  
-  ctx.clearRect(0,0,canvas.width,canvas.height);  
-
-  stars.forEach(s=>{  
-    s.alpha += (Math.random()-0.5)*0.05;  
-    if(s.alpha<0)s.alpha=0;  
-    if(s.alpha>1)s.alpha=1;  
-
-    ctx.beginPath();  
-    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);  
-    ctx.fillStyle=`rgba(255,255,255,${s.alpha})`;  
-    ctx.fill();  
-
-    s.y -= s.speed;  
-    if(s.y<0){  
-      s.y=canvas.height;  
-      s.x=Math.random()*canvas.width;  
-    }  
-  });  
-
-  requestAnimationFrame(draw);  
-}  
-draw();  
-
-function crearEstrellaFugaz(){  
-  const star=document.createElement("div");  
-  star.className="shooting-star";  
-
-  star.style.left=Math.random()*window.innerWidth+"px";  
-  star.style.top=Math.random()*window.innerHeight*0.3+"px";  
-
-  document.body.appendChild(star);  
-
-  const d=400+Math.random()*300;  
-  const t=800+Math.random()*600;  
-
-  star.animate([  
-    {transform:'translate(0,0) scale(1)',opacity:1},  
-    {transform:`translate(${d}px,${d}px) scale(0.5)`,opacity:0}  
-  ],{duration:t,easing:'ease-out'});  
-
-  setTimeout(()=>star.remove(),t);  
-}  
-
-setInterval(()=>{if(Math.random()>0.6)crearEstrellaFugaz()},2000);  
-
-function escribir(texto){  
-  let i=0;  
-  mensaje.innerHTML="";  
-  const inter=setInterval(()=>{  
-    mensaje.innerHTML+=texto.charAt(i);  
-    i++;  
-    if(i>=texto.length)clearInterval(inter);  
-  },40);  
-}  
-
-const mensajes=[  
-"Quería hacerte algo especial 💙",  
-"Eres una gran chica",  
-"Se nota que te esfuerzas mucho",  
-"Tienes algo diferente",  
-"Me gusta hablar contigo",  
-"Casi termino...",  
-"FINAL"  
-];  
-
-let index=0;  
-
-function fondo(){  
-  if(index==1) document.body.style.background="linear-gradient(#6ec6ff,#4facfe)";  
-  if(index==2) document.body.style.background="linear-gradient(#4facfe,#1e3c72)";  
-  if(index==3) document.body.style.background="linear-gradient(#1e3c72,#3a6186)";  
-  if(index==4){  
-    document.body.style.background="linear-gradient(#3a6186,#000)";  
-    moon.style.opacity=1;  
-    document.body.classList.add("night");  
-  }  
-  if(index==5){  
-    document.body.style.background="linear-gradient(#000,#000)";  
-  }  
-}  
-
-function abrir(t){  
-  envelope.classList.remove("open");  
-  mensaje.style.opacity=0;  
-
-  setTimeout(()=>{  
-    envelope.classList.add("open");  
-    escribir(t);  
-    mensaje.style.opacity=1;  
-  },300);  
-}  
-
-envelope.onclick=()=>{  
-  index++;  
-  fondo();  
-
-  if(index>=mensajes.length-1){  
-    abrir("ojalá te haya gustado :) me pareces increíble 💙");  
-    return;  
-  }  
-
-  abrir(mensajes[index]);  
-};  
-
-const peluches=[  
-'https://pngimg.com/uploads/teddy_bear/teddy_bear_PNG142.png',  
-'https://pngimg.com/uploads/teddy_bear/teddy_bear_PNG97.png',  
-'https://pngimg.com/uploads/teddy_bear/teddy_bear_PNG47.png'  
-];  
-
-setInterval(()=>{  
-  const p=document.createElement("img");  
-  p.src=peluches[Math.floor(Math.random()*peluches.length)];  
-  p.className="peluche";  
-  p.style.left=Math.random()*100+"vw";  
-  p.style.width=(130+Math.random()*70)+"px";  
-  p.style.animationDuration=(10+Math.random()*6)+"s";  
-  document.body.appendChild(p);  
-  setTimeout(()=>p.remove(),14000);  
-},2000);  
-
-function toggleMusic(){  
-  music.paused?music.play():music.pause();  
-}  
-
-abrir(mensajes[0]);  
-
-</script>  
-</body>  
+</body>
 </html>
