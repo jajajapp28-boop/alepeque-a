@@ -8,12 +8,12 @@ const carta = `
 
 Hola. 🌷
 
-Si llegaste hasta aquí...
+ale te quiero mucho jaja...
 
-Es porque quería hacerte un detalle diferente.
+sabes que eres una gran chica y mereces que te lo demuestren, las personas que te quieren.
 
-No una imagen.
-No un mensaje cualquiera.
+y yo pensé en una cartita para ti.
+me huebira gustade el detalle en físico, pero talvez algun dia pasara.
 
 Quería crear algo que pudieras abrir,
 explorar y recordar.
