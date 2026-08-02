@@ -8,31 +8,30 @@ const carta = `
 
 Hola. 🌷
 
-ale te quiero mucho jaja...
+Ale te quiero mucho jaja...
 
-sabes que eres una gran chica y mereces que te lo demuestren, las personas que te quieren.
-
+sabes que eres una gran chica y mereces que te lo demuestren, las personas que te quieren;
 y yo pensé en una cartita para ti.
-me huebira gustade el detalle en físico, pero talvez algun dia pasara.
 
-Quería crear algo que pudieras abrir,
-explorar y recordar.
+Me huebira gustado el detalle en físico, pero talvez algun dia pasara.
 
-Cada tulipán representa un pequeño pensamiento.
+Me a encantado conocerte desde hace un tiempo, aunque no lo creas me has ayudado a sobresalir
+y a sentirme mejor.
 
-Cada color representa un momento.
+tantas personas en el mundo pero conectar con alguien es difícil, y aun mas confiar en alguien,
+y yo confío en ti y en tu hermosa forma de ser. 
 
-Y esta carta...
+me gustan muchas cosas de ti, como te expresas y la atención que me prestas...
 
-Es simplemente para decirte
-que eres una persona muy especial.
+Me alegro haberte conocido, mas un teniendo mucha vida por delante, para compartir posibles momentos 
+contigo.
 
 Gracias por existir.
 
-Espero que este pequeño detalle
-te saque una sonrisa.
+Siempre habra una parte de ti en mi corazón, y pedire que siempre te valla bien, y logres todo lo que deseas,
+y ojalá nunca mas vuelvas a sufrir, si esque lo has hecho. 
 
-Con mucho cariño. 💗
+te quiero mucho, con cariño B 💗
 
 `;
 
