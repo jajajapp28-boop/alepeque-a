@@ -172,7 +172,28 @@ body{
     color:#3f2617;
     text-shadow:0 1px 1px rgba(255,255,255,.3);
 }
+#quill{
+    position:absolute;
 
+    width:95px;
+    height:auto;
+
+    top:115px;
+    left:70px;
+
+    transform:rotate(-25deg);
+
+    pointer-events:none;
+
+    z-index:12;
+
+    opacity:0;
+
+    transition:
+        left .08s linear,
+        top .08s linear,
+        opacity .4s ease;
+}
 #close{
     position:absolute;
     top:16px;
@@ -249,8 +270,22 @@ body{
     75%{
         transform:translateX(-50%) scale(1.03);
     }
+@keyframes escribir{
+
+    0%{
+        transform:rotate(-25deg);
+    }
+
+    50%{
+        transform:rotate(-18deg);
+    }
+
+    100%{
+        transform:rotate(-25deg);
+    }
 
 }
+
 @media (max-width:420px){
     .titulo{font-size:2.4rem;}
     .bouquet{transform:scale(.92);}
