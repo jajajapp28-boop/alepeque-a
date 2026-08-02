@@ -125,7 +125,6 @@ body{
 #letterModal.show{
     display:flex;
 }
-
 .paper{
     width:min(92vw,560px);
     max-height:82vh;
@@ -133,24 +132,15 @@ body{
 
     position:relative;
 
-    background:#f8f1dc;
-    color:#4a342b;
+    background:url("papel.png") repeat;
 
-    border-radius:12px;
+    color:#4a2f1f;
 
-    padding:35px 35px 35px 55px;
+    border-radius:10px;
 
-    border:1px solid rgba(120,90,60,.25);
+    padding:45px 40px;
 
-    box-shadow:0 25px 60px rgba(0,0,0,.35);
-
-    background-image:
-        repeating-linear-gradient(
-            to bottom,
-            transparent 0px,
-            transparent 31px,
-            rgba(90,140,255,.15) 32px
-        );
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
 
     animation:pop .4s ease;
 }
@@ -176,9 +166,10 @@ body{
 #typing{
     white-space:pre-line;
     line-height:2;
-    font-size:1.7rem;
+    font-size:1.6rem;
     font-family:'Caveat',cursive;
-    color:#4a342b;
+    color:#3f2617;
+    text-shadow:0 1px 1px rgba(255,255,255,.3);
 }
 
 #close{
