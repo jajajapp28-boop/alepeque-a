@@ -6,7 +6,7 @@ const music = document.getElementById("music");
 
 const carta = `
 
-Hola. 🌷
+Holaa. 🍉
 
 Ale te quiero mucho jaja...
 
@@ -15,23 +15,23 @@ y yo pensé en una cartita para ti.
 
 Me huebira gustado el detalle en físico, pero talvez algun dia pasara.
 
-Me a encantado conocerte desde hace un tiempo, aunque no lo creas me has ayudado a sobresalir
-y a sentirme mejor.
+Me a encantado conocerte, desde hace un tiempo. Aun que no lo creas me has ayudado a sobresalir y a sentirme mejor.
 
-tantas personas en el mundo pero conectar con alguien es difícil, y aun mas confiar en alguien,
-y yo confío en ti y en tu hermosa forma de ser. 
+Tantas personas en el mundo pero conectar con alguien es difícil, y aun mas confiar en alguien, y yo confío en ti y en tu hermosa forma de ser. 
 
-me gustan muchas cosas de ti, como te expresas y la atención que me prestas...
+Me gustan muchas cosas de ti, como te expresas y la atención que me prestas...
 
-Me alegro haberte conocido, mas un teniendo mucha vida por delante, para compartir posibles momentos 
+Me alegro de haberte conocido, mas un teniendo mucha vida por delante, para compartir posibles momentos 
 contigo.
 
 Gracias por existir.
 
 Siempre habra una parte de ti en mi corazón, y pedire que siempre te valla bien, y logres todo lo que deseas,
-y ojalá nunca mas vuelvas a sufrir, si esque lo has hecho. 
+y ojalá nunca nada ni nadie te haga sentir mal, siempre me tendras a mi, la unica persona que puede alejarme de ti, eres tu misma;
+abrazo por siempre. 
 
-te quiero mucho, con cariño B 💗
+Te quiero mucho, con cariño B 💗
+por cierto me encanta tu voz y tu risa. 
 
 `;
 
