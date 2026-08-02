@@ -89,8 +89,6 @@ body{
     transform:translateX(-50%);
     width:112px;
     height:80px;
-    background:linear-gradient(145deg,#fff5f8,#ffdbe7);
-    border-radius:12px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -104,25 +102,33 @@ body{
     animation-play-state:paused;
     transform:translateX(-50%) translateY(-6px) scale(1.08);
 }
-
-#envelope::before{
-    content:'';
+#envelope{
     position:absolute;
-    top:0;
-    left:0;
+    top:185px;
+    width:95px;
+    cursor:pointer;
+    z-index:8;
+
+    animation:heartbeat 3s ease-in-out infinite;
+
+    transition:
+        transform .3s,
+        filter .3s;
+}
+
+#envelope img{
+
     width:100%;
-    height:100%;
-    background:linear-gradient(135deg, transparent 49%, #ffc6d8 50%, transparent 51%);
-    border-radius:12px;
-    opacity:.9;
-}
+    display:block;
 
-.letter-front{
-    position:relative;
-    font-size:1.9rem;
-    z-index:1;
+    filter:
+        drop-shadow(0 8px 12px rgba(0,0,0,.28));
 }
+#envelope{
 
+    transform:rotate(-8deg);
+
+}
 #letterModal{
     position:fixed;
     inset:0;
