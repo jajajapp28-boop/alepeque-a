@@ -89,8 +89,8 @@ body{
 #envelope{
     position:absolute;
     top:95px;              /* Cambia este valor para subir o bajar */
-    left:70%;
-    transform:translateX(-50%) rotate(-12deg);
+    left:75%;
+    transform:translateX(-50%) rotate(-15deg);
     width:95px;
     cursor:pointer;
     z-index:20;
