@@ -279,15 +279,15 @@ body{
 @keyframes escribir{
 
     0%{
-        transform:rotate(30deg);
+        transform:rotate(20deg);
     }
 
     50%{
-        transform:rotate(37deg);
+        transform:rotate(27deg);
     }
 
     100%{
-        transform:rotate(30deg);
+        transform:rotate(20deg);
     }
 
 }
