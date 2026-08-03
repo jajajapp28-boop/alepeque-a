@@ -22,7 +22,7 @@ Tantas personas en el mundo pero conectar con alguien es difícil, y aun mas con
 
 Me gustan muchas cosas de ti, como te expresas y la atención que me prestas...
 
-Me alegro de haberte conocido, mas un teniendo mucha vida por delante, para compartir posibles momentos 
+Me alegro de haberte conocido, mas a un teniendo mucha vida por delante, para compartir posibles momentos 
 contigo.
 
 Gracias por existir.
