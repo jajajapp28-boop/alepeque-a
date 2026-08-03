@@ -171,28 +171,32 @@ body{
     font-family:'Caveat',cursive;
     color:#3f2617;
     text-shadow:0 1px 1px rgba(255,255,255,.3);
+    
+}
+.typing-area{
+    position:relative;
+}
+
+#typing span{
+    display:inline;
 }
 #quill{
     position:absolute;
-
     width:95px;
     height:auto;
 
-    top:115px;
-    left:70px;
-
-    transform:rotate(-25deg);
-
     pointer-events:none;
+    user-select:none;
 
     z-index:12;
 
     opacity:0;
 
+    transform-origin:bottom center;
+
     transition:
-        left .08s linear,
-        top .08s linear,
-        opacity .4s ease;
+        left .05s linear,
+        top .05s linear;
 }
 #close{
     position:absolute;
@@ -270,6 +274,8 @@ body{
     75%{
         transform:translateX(-50%) scale(1.03);
     }
+}
+    
 @keyframes escribir{
 
     0%{
