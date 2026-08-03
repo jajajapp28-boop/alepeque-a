@@ -52,11 +52,16 @@ quill.style.animation = "escribir .35s infinite";
 
         if(i < texto.length){
 
-            typing.innerHTML += texto.charAt(i);
+            const span = document.createElement("span");
+span.textContent = texto.charAt(i);
+typing.appendChild(span);
 
 // Movimiento de la pluma
-quill.style.top = (115 + (typing.scrollHeight - 40)) + "px";
+const rectLetra = span.getBoundingClientRect();
+const rectPapel = document.querySelector(".paper").getBoundingClientRect();
 
+quill.style.left = (rectLetra.left - rectPapel.left - 55) + "px";
+quill.style.top  = (rectLetra.top - rectPapel.top - 35) + "px";
 i++;
 
 setTimeout(escribir,35);
