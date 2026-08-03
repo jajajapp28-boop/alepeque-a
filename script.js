@@ -62,7 +62,7 @@ const rectPapel = document.querySelector(".paper").getBoundingClientRect();
 
 quill.style.left = (rectLetra.left - rectPapel.left - 55) + "px";
 quill.style.top  = (rectLetra.top - rectPapel.top - 35) + "px";
-quill.style.transform = "rotate(120deg)";
+quill.style.transform = "rotate(30deg)";
 i++;
 
 setTimeout(escribir,35);
