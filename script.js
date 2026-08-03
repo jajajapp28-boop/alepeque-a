@@ -3,6 +3,7 @@ const modal = document.getElementById("letterModal");
 const closeBtn = document.getElementById("close");
 const typing = document.getElementById("typing");
 const music = document.getElementById("music");
+const quill = document.getElementById("quill");
 
 const carta = `
 
@@ -40,6 +41,8 @@ let escribiendo = false;
 function escribirTexto(texto){
 
     typing.innerHTML = "";
+    quill.style.opacity = "1";
+quill.style.animation = "escribir .35s infinite";
 
     let i = 0;
 
@@ -51,14 +54,19 @@ function escribirTexto(texto){
 
             typing.innerHTML += texto.charAt(i);
 
-            i++;
+// Movimiento de la pluma
+quill.style.top = (115 + (typing.scrollHeight - 40)) + "px";
 
-            setTimeout(escribir,35);
+i++;
+
+setTimeout(escribir,35);
 
         }else{
 
-            escribiendo = false;
+    escribiendo = false;
 
+    quill.style.opacity = "0";
+    quill.style.animation = "none";
         }
 
     }
@@ -82,6 +90,8 @@ envelope.addEventListener("click",()=>{
 closeBtn.addEventListener("click",()=>{
 
     modal.classList.remove("show");
+    quill.style.opacity = "0";
+quill.style.animation = "none";
 
 });
 
@@ -90,6 +100,8 @@ window.addEventListener("click",(e)=>{
     if(e.target===modal){
 
         modal.classList.remove("show");
+        quill.style.opacity = "0";
+quill.style.animation = "none";
 
     }
 
